@@ -1,0 +1,13 @@
+Se requiere realizar un proyecto en lenguaje C donde se evidencien los conceptos vistos en clase, el proyecto lo deberán entregar cómo link (Enlace - URL) a sus respectivas cuentas de https://repl.it/ .
+Las funcionalidades del proyecto y las librerias son de libre elección (Cada quien decide que va a hacer su programa) - No pueden elegir los ejemplos vistos en clase.
+
+Fecha límite de entrega: Viernes 26 Marzo de 2021, 5:00 pm
+
+El programa debe contener almenos:
+- 1 Libreria propia - 2 archivos (miLibreria.c, miLibreria.h)
+- La libreria debe tener varias funciones que luego se utilicen en el main.c
+- Se debe evidenciar el uso de almenos 2 librerias standard 
+- Debe contener al menos 1 ciclo (for, while, do-while)
+- Debe contener almenos 1 If() o un switch()
+- Debe contener arreglos de 2 dimensiones o matrices (Quese usen como parte de la lógica del programa)
+

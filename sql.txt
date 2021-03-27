@@ -1,0 +1,68 @@
+// insert cliente
+
+/*INSERT INTO CLIENTE (nom_cliente,direc_cliente,ciudad_cliente) values ('manco','diago1a1','cali')*/
+
+/* SELECT * from cliente where ciudad_cliente = 'popayan' OR ciudad_cliente = 'cali' */
+
+/* SELECT * from fact_prudcuto */
+
+
+// join
+
+SELECT nom_cliente, fact_prudcuto.num_factura,cant_producto,producto.nom_producto,precio_producto from fact_prudcuto CROSS JOIN factura,cliente,producto where fact_prudcuto.num_factura = factura.num_factura and factura.cod_cliente = cliente.cod_cliente and fact_prudcuto.cod_producto = producto.cod_producto
+
+
+
+// crear tabla fact_producto
+
+CREATE table fact_prudcuto (
+	num_factura int REFERENCES factura,
+  	cod_producto int REFERENCES producto,
+  	cant_producto int
+)
+
+
+// tabla factura
+
+CREATE table factura (
+	num_factura serial PRIMARY KEY,
+  	cod_cliente INTEGER REFERENCES cliente,
+  	date_factura date,
+)
+
+// tabla producto
+
+create TABLE producto (
+	cod_producto serial PRIMARY key,
+  	nom_producto VARCHAR(10),
+  	precio_producto int
+)
+
+// tabla cliente
+
+create table cliente(
+	cod_cliente serial PRIMARY KEY,
+  	nom_cliente VARCHAR(15),
+  	direc_cliente VARCHAR(20),
+  	ciudad_cliente VARCHAR(20)
+                      
+)
+
+
+// adiccional
+
+/*insert into cliente (nom_cliente,direc_cliente,ciudad_cliente) values ('ramon jose','cra-11a','popayan')
+*/
+/* SELECT * from cliente  */
+
+/* insert into producto (nom_producto,precio_producto) values ('fresa',500)*/
+
+/* SELECT * from producto  */
+
+/* insert into factura (cod_cliente,date_factura) values (2,'2021-03-16')
+*/
+/* SELECT * from factura */
+ 
+ /*insert into fact_prudcuto VALUES (4,4,5)*/
+
+SELECT * from fact_prudcuto
